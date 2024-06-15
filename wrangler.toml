@@ -1,4 +1,4 @@
-name = "remix-cloudflare-workers-template"
+name = "fidc"
 
 main = "./server.js"
 workers_dev = true

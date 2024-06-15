@@ -1,7 +1,9 @@
 {
+  "extends": "@tsconfig/strictest",
   "include": [
     "worker-configuration.d.ts",
     "env.d.ts",
+    "load-context.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/.server/**/*.ts",
@@ -16,20 +18,16 @@
       "@cloudflare/workers-types",
       "vite/client"
     ],
-    "isolatedModules": true,
-    "esModuleInterop": true,
+
     "jsx": "react-jsx",
+    "module": "ESNext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "target": "ES2022",
-    "strict": true,
+
     "allowJs": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./app/*"]
-    },
+    "verbatimModuleSyntax": true,
 
     // Remix takes care of building everything in `remix build`.
     "noEmit": true
